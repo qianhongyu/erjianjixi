@@ -1,0 +1,236 @@
+package com.jeecg.hetong.entity;
+
+import java.math.BigDecimal;
+import java.util.Date;
+import java.lang.String;
+import java.lang.Double;
+import java.lang.Integer;
+import java.math.BigDecimal;
+import javax.xml.soap.Text;
+import java.sql.Blob;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+import org.hibernate.annotations.GenericGenerator;
+import javax.persistence.SequenceGenerator;
+import org.jeecgframework.poi.excel.annotation.Excel;
+
+/**   
+ * @Title: Entity
+ * @Description: 合同信息表
+ * @author onlineGenerator
+ * @date 2018-01-08 09:34:31
+ * @version V1.0   
+ *
+ */
+@Entity
+@Table(name = "accrual_hetong", schema = "")
+@SuppressWarnings("serial")
+public class AccrualHetongEntity implements java.io.Serializable {
+	/**主键*/
+	private java.lang.String id;
+	/**合同编号*/
+	@Excel(name="合同编号",width=15)
+	private java.lang.Integer contractid;
+	/**借款单位*/
+	@Excel(name="借款单位",width=15)
+	private java.lang.String borrower;
+	/**贷款单位*/
+	@Excel(name="贷款单位",width=15)
+	private java.lang.String loanunit;
+	/**区域公司*/
+	@Excel(name="区域公司",width=15)
+	private java.lang.String companyarea;
+	/**承包商*/
+	@Excel(name="承包商",width=15)
+	private java.lang.String contractor;
+	/**项目部*/
+	@Excel(name="项目部",width=15)
+	private java.lang.String projectdept;
+	/**贷款方式*/
+	@Excel(name="贷款方式",width=15)
+	private java.lang.String loanmethod;
+	/**合同性质*/
+	@Excel(name="合同性质",width=15)
+	private java.lang.String contractnature;
+	/**合同状态*/
+	@Excel(name="合同状态",width=15,dicCode="bpm_status")
+	private java.lang.String contractstatus;
+	
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  主键
+	 */
+	@Id
+	@GeneratedValue(generator = "paymentableGenerator")
+	@GenericGenerator(name = "paymentableGenerator", strategy = "uuid")
+
+	@Column(name ="ID",nullable=false,length=36)
+	public java.lang.String getId(){
+		return this.id;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  主键
+	 */
+	public void setId(java.lang.String id){
+		this.id = id;
+	}
+	/**
+	 *方法: 取得java.lang.Integer
+	 *@return: java.lang.Integer  合同编号
+	 */
+
+	@Column(name ="CONTRACTID",nullable=true,length=50)
+	public java.lang.Integer getContractid(){
+		return this.contractid;
+	}
+
+	/**
+	 *方法: 设置java.lang.Integer
+	 *@param: java.lang.Integer  合同编号
+	 */
+	public void setContractid(java.lang.Integer contractid){
+		this.contractid = contractid;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  借款单位
+	 */
+
+	@Column(name ="BORROWER",nullable=true,length=20)
+	public java.lang.String getBorrower(){
+		return this.borrower;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  借款单位
+	 */
+	public void setBorrower(java.lang.String borrower){
+		this.borrower = borrower;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  贷款单位
+	 */
+
+	@Column(name ="LOANUNIT",nullable=true,length=50)
+	public java.lang.String getLoanunit(){
+		return this.loanunit;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  贷款单位
+	 */
+	public void setLoanunit(java.lang.String loanunit){
+		this.loanunit = loanunit;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  区域公司
+	 */
+
+	@Column(name ="COMPANYAREA",nullable=true,length=50)
+	public java.lang.String getCompanyarea(){
+		return this.companyarea;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  区域公司
+	 */
+	public void setCompanyarea(java.lang.String companyarea){
+		this.companyarea = companyarea;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  承包商
+	 */
+
+	@Column(name ="CONTRACTOR",nullable=true,length=50)
+	public java.lang.String getContractor(){
+		return this.contractor;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  承包商
+	 */
+	public void setContractor(java.lang.String contractor){
+		this.contractor = contractor;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  项目部
+	 */
+
+	@Column(name ="PROJECTDEPT",nullable=true,length=20)
+	public java.lang.String getProjectdept(){
+		return this.projectdept;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  项目部
+	 */
+	public void setProjectdept(java.lang.String projectdept){
+		this.projectdept = projectdept;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  贷款方式
+	 */
+
+	@Column(name ="LOANMETHOD",nullable=true,length=50)
+	public java.lang.String getLoanmethod(){
+		return this.loanmethod;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  贷款方式
+	 */
+	public void setLoanmethod(java.lang.String loanmethod){
+		this.loanmethod = loanmethod;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  合同性质
+	 */
+
+	@Column(name ="CONTRACTNATURE",nullable=true,length=50)
+	public java.lang.String getContractnature(){
+		return this.contractnature;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  合同性质
+	 */
+	public void setContractnature(java.lang.String contractnature){
+		this.contractnature = contractnature;
+	}
+	/**
+	 *方法: 取得java.lang.String
+	 *@return: java.lang.String  合同状态
+	 */
+
+	@Column(name ="CONTRACTSTATUS",nullable=true,length=32)
+	public java.lang.String getContractstatus(){
+		return this.contractstatus;
+	}
+
+	/**
+	 *方法: 设置java.lang.String
+	 *@param: java.lang.String  合同状态
+	 */
+	public void setContractstatus(java.lang.String contractstatus){
+		this.contractstatus = contractstatus;
+	}
+}
